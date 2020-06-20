@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./Cards.module.css";
 import CountUp from "react-countup";
 import cx from 'classnames';
-import { Card, CardContent, Typography, Grid } from "@material-ui/core";
+import { Card, CardContent, Typography, Grid, CircularProgress } from "@material-ui/core";
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return "Loading ...";
+    return (<CircularProgress style={{marginTop:"150px"}} color="secondary" thikness={200} size={100}/>);
   }
   return (
     <div className={styles.container}>

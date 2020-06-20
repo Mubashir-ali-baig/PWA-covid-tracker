@@ -27,7 +27,7 @@ const CountryPicker = ({handleCountryChange}) => {
             key={i}
             >
             {country}
-            </option>):<option>{"could not load countries"}</option>}
+            </option>):null}
         </NativeSelect>
     </FormControl>
     );
